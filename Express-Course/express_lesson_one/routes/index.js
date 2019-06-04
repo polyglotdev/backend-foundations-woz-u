@@ -5,7 +5,7 @@ var router = express.Router()
 router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'My Cats',
-    users: [{ name: 'Maggie' }, { name: 'Slyvester' }, { name: 'Killer-K' }]
+    cats: [{ name: 'Maggie' }, { name: 'Slyvester' }, { name: 'Killer-K' }]
   })
 })
 
