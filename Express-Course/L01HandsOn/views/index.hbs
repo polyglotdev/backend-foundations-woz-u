@@ -1,2 +1,29 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<p>Welcome to a list of {{title}}</p>
+
+<table>
+	<thead>
+		<tr>
+			<th>City</th>
+			<th>State</th>
+			<th>Population</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			{{#each cities}}
+			<td>{{this.name}}</td>
+			{{/each}}
+		</tr>
+		<tr>
+			{{#each cities}}
+			<td>{{this.population}}</td>
+			{{/each}}
+		</tr>
+		<tr>
+			{{#each cities}}
+			<td>{{this.population}}</td>
+			{{/each}}
+		</tr>
+	</tbody>
+</table>
