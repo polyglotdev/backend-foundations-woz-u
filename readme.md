@@ -27,3 +27,19 @@ Express.js better known as just **Express**, is a web application framework for 
 Express is currently the most popular framework built on top of Node, which heps organize server-side code into a MVC 🛠. It provides JavaScript engineers witht he necessary tools to build applications quickly and securely. Express provides may javascript capabilities that make it an essential part of the Node development and allow it to stand out amoung other frameworks. From simple database connections to security modules and HTTP requests, Express has been a respectable framework since it was picked up in the dev community.
 
 Now, analyze how eah part of the Back-End operates by mocking a user signing into their email. When a URL is entered into the client web browser, a request is sent to the email server. The email server will then see the request, which in the case is to log in and execute the appropriate action by the engineer in the corresponding Express route.
+
+## HTTP Request and Response
+HTTP, or Hypertext Transfer Protocol, is the foundation of communication for the web. It is a application layer protocol for communication between systems using hypermedia documents such as HTML. Since then. HTTP has been extended to support more than just Hypertext Markup Docuemnts including images and videos. HTTP was invented to enable commuication between web browsers and web servers. This client-server model allws the client to communicate with the server by way of requests and responses respectivley. Once the request has been fullfilled, the line of communication between the client and server is closed. The server does not keep any session informatiln about the HTTP protocol commuication after the connection is closed. This means future connections between client and server are always from the perspective of the server. As a result, HTTP is classified as *statless protocol*
+
+**HTTP Request Life Cycle**
+
+The lifecycle of an HTTP request between a client and a server can be distilled into for distinct parts:
+1. Connection is made between the client and the server
+2. the client sends an HTTP message over the HTTP connection to the server
+3. server will read the message sent from the client perform and necessary computation and return an HTTP message as a resposnse
+4. Connection between the client and the server will either close or remain open for furhter requests
+
+⭐Commands/Things to remmeber  ⭐:
+
+`express --view=hbs nameOYourProject`
+- Don't forget to run NPM install after creation of your express project
