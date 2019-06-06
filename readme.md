@@ -43,3 +43,12 @@ The lifecycle of an HTTP request between a client and a server can be distilled 
 
 `express --view=hbs nameOYourProject`
 - Don't forget to run NPM install after creation of your express project
+
+## HTTP Verbs
+
+HTTP request vers are used to indicate the desired action to be performed within your request. There are four commonly used HTTP requests, `GET, POST, PUT, DELETE`. These four requests are methods are often referred to as *CRUD* operations which stands for, create, read, update and delete. CRUD operations are the basics for persisting data on the database.
+
+- POST: is used to send data to the specified resource on the server. As a result the state of the server is changed. POST is represented by the *C* in CRUD.
+- GET: is used to *read* a specicfied resource. This operation does not change the data as a result since you are just retriving data.
+- PUT: is used to *update* a specified resource with the data being sent and will change the data as it is being updated.
+- DELETE: is used to *delete* the specified resource. This changes the data as well because you are deleting the specific data out of the database.
