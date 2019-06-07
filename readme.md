@@ -52,3 +52,5 @@ HTTP request vers are used to indicate the desired action to be performed within
 - GET: is used to *read* a specicfied resource. This operation does not change the data as a result since you are just retriving data.
 - PUT: is used to *update* a specified resource with the data being sent and will change the data as it is being updated.
 - DELETE: is used to *delete* the specified resource. This changes the data as well because you are deleting the specific data out of the database.
+
+## Request and Response
