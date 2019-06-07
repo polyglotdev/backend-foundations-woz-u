@@ -54,3 +54,10 @@ HTTP request vers are used to indicate the desired action to be performed within
 - DELETE: is used to *delete* the specified resource. This changes the data as well because you are deleting the specific data out of the database.
 
 ## Request and Response
+**Request Codes:**
+- 200 Success: meas the request was successful
+- 400 Bad Request: means the HTTP request that was sent to te server has invalid syntax
+- 401 Unauthorizred: means that the user nust provide credentials to be able to view the protected resource
+- 403 Forbidden: means that the ser made a valid request but the server is refusing to serve the request due to a lack of permission to access the requested resource
+- 404 No Found: means that the user is able to communicate with the server but it is unable to locate the requested file or resource
+- 500 Internal Server Error: Shit is broke, yo!
