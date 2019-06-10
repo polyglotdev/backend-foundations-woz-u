@@ -61,3 +61,18 @@ HTTP request vers are used to indicate the desired action to be performed within
 - 403 Forbidden: means that the ser made a valid request but the server is refusing to serve the request due to a lack of permission to access the requested resource
 - 404 No Found: means that the user is able to communicate with the server but it is unable to locate the requested file or resource
 - 500 Internal Server Error: Shit is broke, yo!
+
+
+## Routing
+
+**Models**
+
+When working with Express, Models are the schemas that are based on he ORM defintion. *ORM* stands for the Object-Relational Mapping and it is a tool that convertsdata between incomparaible type systems using object oreinted programming languages. You will be learning about ORM's in Lesson 5 of this course and how to use it with Express but it is important to know that the Models are essentially how to organize data within the application.
+
+**Views**
+
+The views are the templates being used within the back end application. In this course you are using Handlebars which is the templating engine to render data from the server. There are other templating engines available but we use Handlebars most frequently in Express.
+
+**Controllers**
+
+Controllers in Express are the Middleware that is being used. Middleware is software that acts as a bridge between and operating system or databases and applications. These controllers are really a list of functions that will be executed, in order, when the request matches that route string. You have learned about matching routes withing the URL and returning certain data based on that but in this less you are going to learn more about the routing and displaying different data. Doing this is essentially controlling the data.
