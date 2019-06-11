@@ -1,4 +1,4 @@
-module.exports.storySection = [
+module.exports.storyLine = [
   {
     storyPart: 'beginning',
     name: 'Rupert',
