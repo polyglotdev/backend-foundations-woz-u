@@ -4,10 +4,11 @@ var storySections = require('../models/storyLine')
 
 /* GET home page. */
 router.get('/beginning', function(req, res, next) {
-  let start = storySections.storyLine.find((story) => {
-    return story.storyPart === req.params.id
+  let beginning = storySections.storyLine.find((story) => {
+    return story.storyPart === 'beginning'
   })
-  res.render('beginning', { start: start })
+
+  res.render('beginning', { beginning })
 })
 
 module.exports = router
