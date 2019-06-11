@@ -11,4 +11,20 @@ router.get('/beginning', function(req, res, next) {
   res.render('beginning', { beginning })
 })
 
+router.get('/middle', function(req, res, next) {
+  let middle = storySections.storyLine.find((story) => {
+    return story.storyPart === 'middle'
+  })
+
+  res.render('middle', { middle })
+})
+
+router.get('/end', function(req, res, next) {
+  let end = storySections.storyLine.find((story) => {
+    return story.storyPart === 'end'
+  })
+
+  res.render('end', { end })
+})
+
 module.exports = router
