@@ -1,9 +1,13 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
+var storySections = require('../models/storyLine')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/beginning', function(req, res, next) {
+  let start = storySections.storyLine.find((story) => {
+    return story.storyPart === req.params.id
+  })
+  res.render('index', { title: 'Express' })
+})
 
-module.exports = router;
+module.exports = router
