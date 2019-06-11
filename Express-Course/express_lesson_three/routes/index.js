@@ -8,6 +8,7 @@ router.get('/person/:id', function(req, res, next) {
     return people.id === parseInt(req.params.id)
   })
   res.render('index', { person })
+  console.log(req.url)
 })
 
 module.exports = router
