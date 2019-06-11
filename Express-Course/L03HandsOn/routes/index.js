@@ -7,7 +7,7 @@ router.get('/beginning', function(req, res, next) {
   let start = storySections.storyLine.find((story) => {
     return story.storyPart === req.params.id
   })
-  res.render('index', { title: 'Express' })
+  res.render('beginning', { start: start })
 })
 
 module.exports = router
