@@ -12,9 +12,20 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
   if (err) {
     console.error(err.message)
+    return
   }
   console.log(`You are connected to the database sucka`)
 })
+
+const query = `SELECT * FROM actor LIMIT 10`
+connection.query(query, (err, results) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  console.log(results)
+})
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' })
