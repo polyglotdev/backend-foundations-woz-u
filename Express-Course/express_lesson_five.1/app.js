@@ -39,4 +39,6 @@ app.use(function(err, req, res, next) {
   res.render('error')
 })
 
+models.sequelize.sync().then(() => console.log('DB sync active'))
+
 module.exports = app
