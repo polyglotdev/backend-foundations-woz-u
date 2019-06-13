@@ -17,18 +17,25 @@ connection.connect(function(err) {
   console.log(`You are connected to the database sucka`)
 })
 
-const query = `SELECT * FROM actor LIMIT 10`
-connection.query(query, (err, results) => {
-  if (err) {
-    console.error(err)
-    return
-  }
-  console.log(results)
-})
-
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' })
+router.get('/actor/:id', function(req, res, next) {
+  let actorId = parseInt(req.params.id)
+  console.log(actorId)
+
+  let actorQuery = `SELECT * FROM actor WHERE actor_id=${actorId}`
+
+  connection.query(actorQuery, (err, result) => {
+    if (err) {
+      console.log(err.message)
+      next()
+      return
+    }
+    if (result.length > 0) {
+      res.render('index', { actor: result[0] })
+    } else {
+      res.send(`not a vaild actor id!`)
+    }
+  })
 })
 
 module.exports = router
